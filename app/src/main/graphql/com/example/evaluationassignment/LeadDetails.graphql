@@ -1,0 +1,48 @@
+query LeadIntentionsQuery{
+    fetchLeadIntentionTypes {
+        id
+        title
+    }
+}
+
+query ADSourcesQuery{
+    fetchAdSources {
+        id
+        title
+    }
+}
+
+query CountriesQuery{
+    fetchCountries {
+        id
+        emoji
+        title
+        shortCode1
+        phoneCode
+    }
+}
+
+query CitiesQuery($country: Int!){
+    cities(countryId: $country){
+        id
+        title
+    }
+}
+
+query LanguagesQuery{
+    languages {
+        id
+        title
+    }
+}
+
+query StatusQuery{
+    fetchLeadStatusTypes {
+        id
+        title
+        step
+        stepsCount
+        color
+        backgroundColor
+    }
+}

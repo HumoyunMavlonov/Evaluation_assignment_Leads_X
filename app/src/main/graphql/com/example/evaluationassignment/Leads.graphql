@@ -1,0 +1,28 @@
+query AllLeads($pagination:PaginationInput!, $params: FetchLeadsInput!){
+    fetchLeads(pagination: $pagination, params: $params){
+        cursor
+        hasMore
+        totalCount
+        data{
+            id
+            firstName
+            lastName
+            createdAt
+            status{
+                id
+                step
+                stepsCount
+                title
+                color
+                backgroundColor
+            }
+            avatar {
+                path
+            }
+            country {
+                emoji
+                title
+            }
+        }
+    }
+}
